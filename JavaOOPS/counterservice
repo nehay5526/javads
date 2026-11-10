@@ -1,0 +1,21 @@
+@Service
+public class CounterService {
+    private int counter = 0;
+
+    public  increment() {
+       return counter++;
+    }
+
+}
+
+// this is not thread safe-
+//to make this thread safe we can use synchronized keyword on the method or we can use AtomicInteger class which is thread safe and provides atomic operations.
+//  anf allso we can use AtomicInteger class which is thread safe and provides atomic operations.
+
+
+Map<String,Interger> map = new HashMap<>();
+map.put("key1",1);
+map.put("key1",2);
+
+sop(map.size()); // this will print 1 because the key is same and the value is overwritten
+sop(map.get("key1")); // this will print 2 because the value is overwritten 
